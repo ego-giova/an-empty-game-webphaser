@@ -1,17 +1,23 @@
+//With strict mode, you can not, for example, use undeclared variables.
 "use strict";
 
-var empty = empty || {};
+//This is a namespace. It is a global object.
+var silent = silent || {};
 
+//Initial configuration to initialize phaser.
 var configuration = {
 	width: 800,
 	height: 600,
 	renderer: Phaser.AUTO
 };
 
-empty.game = new Phaser.Game(configuration);
+//Start phaser
+silent.game = new Phaser.Game(configuration);
 
-empty.game.state.add("Launcher", empty.launcher);
-empty.game.state.add("LoadingScreen", empty.loadingScreen);
-empty.game.state.add("Gameplay", empty.gameplay);
+//State.add: A reference to the GameObjectFactory which can be used to add new objects to the World.
+silent.game.state.add("Launcher", silent.Launcher);
+silent.game.state.add("LoadingScreen", silent.LoadingScreen);
+silent.game.state.add("Playground", silent.Playground);
 
-empty.game.state.start("Launcher");
+
+silent.game.state.start("Launcher");
