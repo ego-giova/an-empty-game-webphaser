@@ -19,5 +19,4 @@ silent.game.state.add("Launcher", silent.Launcher);
 silent.game.state.add("LoadingScreen", silent.LoadingScreen);
 silent.game.state.add("Playground", silent.Playground);
 
-
 silent.game.state.start("Launcher");

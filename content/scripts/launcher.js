@@ -10,7 +10,6 @@ silent.Launcher = function(game){};
 silent.Launcher.prototype.init = function() 
 {
 	//init method
-	this.game.input.maxPointers = 1;
 	this.game.stage.disableVisibilityChange = true;
 	this.game.renderer.renderSession.roundPixels = true;
 	this.game.stage.backgroundColor = "#c86464";

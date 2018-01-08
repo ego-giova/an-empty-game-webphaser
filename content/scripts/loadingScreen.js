@@ -24,7 +24,7 @@ silent.LoadingScreen.prototype.preload = function()
 
 
 	/* ALL WE NEED TO LOAD */
-
+	this.load.image('square', 'content/sprites/square.png');
 	/*END ALL WE NEED TO LOAD*/
 
 
