@@ -11,9 +11,8 @@ silent.Playground.prototype.preload = function()
 	/*setting up some things*/
 	this.physics.startSystem(Phaser.Physics.ARCADE);
 	this.physics.arcade.gravity.y = 300;
-
-	this.cursors = this.input.keyboard.createCursorKeys();
-	//this.jumpButton = this.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+	this.cursors = this.input.keyboard.createCursorKeys(); //this is to get the key pressed
+	this.jumpButton = this.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	/*end setting up some things*/
 
 	//Create a player using the class BasePlayer
@@ -32,8 +31,9 @@ silent.Playground.prototype.update = function()
 	{
 		this.player.move(200);
 	}
-	/*else if(this.jumpButton.isDown && this.player.body.onFloor() && this.game.time.now > this.player.jumpTimer)
+	//Jump
+	if(this.jumpButton.isDown && this.player.body.onFloor() && this.game.time.now > this.player.jumpTimer)
 	{
 		this.player.jump();
-	}*/
+	}
 };
